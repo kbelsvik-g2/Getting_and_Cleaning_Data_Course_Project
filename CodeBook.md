@@ -73,15 +73,15 @@ Data transformation was done using the run_analysys.R script
 ### Explaination of process
 The data is imported from **X_train.txt** and **X_test.txt** files in the train and test folders respectively and then combined together using rbind().
 
-Mean and standard deviation variables are extracted from the combined data by examining the variable names imported from the **features.txt** file.  Only columns correspoding to variable names containing either mean() or std(), found using grep(), are extracted, using the logical vector returned by grep(), as these variables correspond to the mean and standard deviation variables that we are interested in.
+Mean and standard deviation variables are extracted from the combined data by examining the variable names imported from the **features.txt** file.  Columns correspoding to variable names containing either mean() or std() are found using grep().  Using the logical vector returned by grep() these columns are extracted to be used as our data.
 
-Once the desired variables have been extracted the variable names are cleansed by having any of the characters "-", "(", or ")" removed using gsub(). The cleansed names of the columns extracted before are then assigned as the column names of the of our data.
+Once the desired variables have been extracted the variable names from **features.txt** are cleansed by having any of the characters "-", "(", and ")" removed using gsub(). The cleansed names of the variables extracted before are then assigned as the column names of the of our data.
 
-The activity data **y_train.txt** and **y_test.txt** from the train and test folders is imported and combined using rbind().  This data represents the activity performed for each observation in our data set.  To convert the activity data from integer codes into more descritive character strings, the data from **activity_labels.txt** is imported.  All activity codes are replaced with the corresponding text description according to the activity labels.  Activity data is then combined into our data using cbind().
+The activity data **y_train.txt** and **y_test.txt** from the train and test folders is imported and combined using rbind().  This data represents the activity performed for each observation in our data set.  To convert the activity data from integer codes into more descriptive character strings, the data from **activity_labels.txt** is imported.  All activity codes are replaced with the corresponding text description according to the activity labels.  Activity data is then combined into our data using cbind().
 
 Test subject data is imported from **subject_train.txt** and **subject_test.txt** in the train and test folders, combined using rbind(), and added to our data using cbind().
 
-Our data is condensed on the means corresponding to each subject and activity using melt() and dcast().
+Our data is condensed on the means corresponding to each subject, activity, and variable using melt() then dcast().
 
 ## Data Dictionary
 
