@@ -1,13 +1,13 @@
 # Code Book for ActivityData.txt
-**ActivityData.txt** contains data for 10299 of 68 variables
+**ActivityData.txt** contains data for 180 observations of 68 variables
 
-This data is compiled from data that can be obtained here:
+This data is compiled using run_analysis.R using data which can be obtained from:
    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
 ## Description of data
-The data contains a mean for all mean a standard deviation varaiables sampled for each test subject and activity performed.  The activity column identifies which activity was performed and the subject column identifies the id of which subject performed the activity.  The remaining 66 columns are for each of the mean and standard deviation variables we are interested in.
+The data contains the mean for all mean a standard deviation varaiables sampled for each test subject and activity performed.  The activity column identifies which activity was performed and the subject column identifies the id of which subject performed the activity.  The remaining 66 columns are for each of the mean and standard deviation variables we are interested in.
 
-A description of how the data was obtained from **features_info.txt** included with the data set:
+A description of how the raw data was obtained from **features_info.txt**, which is included with the data set:
 
       The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
       
@@ -64,7 +64,7 @@ A description of how the data was obtained from **features_info.txt** included w
       tBodyGyroMean
       tBodyGyroJerkMean
       
-As stated above, for the purposes of this assignment, of the variables described in the featues_info.txt the variables we are interested in for each of the signals are mean(), and std().
+As stated above, for the purposes of this assignment, of the variables described in the featues_info.txt, the variables we are interested in for each of the signals are mean(), and std().
 
 
 ## Transformation of data

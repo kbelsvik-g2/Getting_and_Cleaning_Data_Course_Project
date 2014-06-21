@@ -12,7 +12,7 @@ Course project for the Getting and Cleaning Data Coursera course
 - UCI_HAR_DATASET.zip
 
 
-- **ActivityData.txt** - This file contains the finished clean dataset for this project.  It can be read into R using read.table().  A in depth description of of these data and how it was obtained can be found below or in **CodeBook.md**.
+- **ActivityData.txt** - This file contains the finished clean dataset for this project.  It can be read into R using read.table().  A in depth description of this data and how it was obtained can be found below or in **CodeBook.md**.
 
 - **CodeBook.md** - This file contains the description of the data and how it was obtained.
 
